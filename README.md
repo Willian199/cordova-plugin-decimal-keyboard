@@ -8,13 +8,18 @@ Taken from [mrchandoo's](https://github.com/mrchandoo) repo [cordova-plugin-deci
 ## Install
 
 ```bash
-cordova plugin add --save cordova-plugin-decimal-keyboard-wkwebview
+cordova plugin add --save https://github.com/MaximBelov/cordova-plugin-decimal-keyboard-wkwebview.git
 ```
 
 ## Usage
 
 ```html
-<input type="text" pattern="[0-9]*" decimal="true">
+<input type="text" inputmode="numeric" pattern="[0-9]*" decimal-char=".">
+
+<input type="text" inputmode="numeric" pattern="[0-9]*" done-button="Ok">
+
+<input type="text" inputmode="numeric" pattern="[0-9]*" done-button="Done">
+
 ```
 
 Input type number will not work, try to use text with [0-9] pattern instead.
@@ -24,7 +29,7 @@ Input type number will not work, try to use text with [0-9] pattern instead.
 ## Multiple decimals
 
 ```html
-<input type="text" pattern="[0-9]*" decimal="true" allow-multiple-decimals="true">
+<input type="text" pattern="[0-9]*" decimal-char="." allow-multiple-decimals="true">
 ```
 
 <img src="screenshots/multiple-decimals.png" width="25%" height="25%" />
@@ -32,7 +37,7 @@ Input type number will not work, try to use text with [0-9] pattern instead.
 ### Different decimal character
 
 ```html
-<input type="text" pattern="[0-9]*" decimal="true" allow-multiple-decimals="false" decimal-char=",">
+<input type="text" pattern="[0-9]*" decimal-char="," allow-multiple-decimals="false">
 ```
 
 If you want to localize decimal character, you can change using decimal-char attribute
@@ -40,7 +45,8 @@ If you want to localize decimal character, you can change using decimal-char att
 <img src="screenshots/different-decimal-char.png" width="25%" height="25%" />
 
 ## Known Issues
-* Does not handle screen rotation.
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
