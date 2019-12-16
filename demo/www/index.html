@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Hello World</title>
+</head>
+<body>
+<div class="app">
+
+    <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received">Device is Ready</p>
+    </div>
+
+    <form>
+
+        <label>
+            decimal-char="."
+            <input type="text" inputmode="numeric" pattern="[0-9]*" decimal-char=".">
+        </label>
+        <br><br>
+
+        <label>
+            decimal-char="." allow-multiple-decimals
+            <input type="text" inputmode="numeric" pattern="[0-9]*" decimal-char="." allow-multiple-decimals>
+        </label>
+        <br><br>
+
+        <label>
+            done-button - default
+            <input type="text" inputmode="numeric" pattern="[0-9]*" done-button="Ok">
+        </label>
+        <br><br>
+        <label>
+            done-button="Done"
+            <input type="number" pattern="[0-9]*" done-button="Done">
+        </label>
+        <br><br>
+    </form>
+
+
+    <form action="#" >
+        <h1>Test</h1>
+        <input type="hidden" name="data" value='{
+                    "title": "New Pen!",
+                    "html": "<div>Your submission</div>
+                    "}'>
+        <!-- Number -->
+        <div class="form-group">
+            <label for="number">type="number"</label>
+            <input id="number" type="number">
+        </div>
+        <!-- Tel -->
+        <div class="form-group">
+            <label for="tel">type="tel"</label>
+            <input id="tel" type="tel">
+        </div>
+        <!-- Tel Pattern -->
+        <div class="form-group">
+            <label for="telPattern">type="tel" pattern="[0-9]*"</label>
+            <input id="telPattern" type="tel" pattern="[0-9]*">
+        </div>
+        <!-- Text field with numeric Pattern -->
+        <div class="form-group">
+            <label for="textPattern">type="text" pattern="[0-9]*"</label>
+            <input id="textPattern" type="text" pattern="[0-9]*">
+        </div>
+        <!-- Numeric pattern -->
+        <div class="form-group">
+            <label for="numericPattern">type="number" pattern="[0-9]*"</label>
+            <input id="numericPattern" type="number" pattern="[0-9]*">
+        </div>
+        <!-- Number Step -->
+        <div class="form-group">
+            <label for="numberStep">type="number" step="0.01"</label>
+            <input id="numberStep" type="number" step="0.01">
+        </div>
+        <!-- D Hack -->
+        <div class="form-group">
+            <label for="dHack">type="text" pattern="\d*"</label>
+            <input id="dHack" type="text" pattern="\d*">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
