@@ -7,9 +7,9 @@ var DecimalKeyboard = function () {
 };
 
 DecimalKeyboard.getActiveElementType = function () {
-  if (document.activeElement.hasAttribute('done-button')) {
+  if (document.activeElement.getAttribute('done-button')) {
     return 'done-button';
-  } else if (document.activeElement.hasAttribute('decimal-char')) {
+  } else if (document.activeElement.getAttribute('decimal-char')) {
     return 'decimal-char';
   }
   return document.activeElement.type;
