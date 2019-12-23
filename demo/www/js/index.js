@@ -44,3 +44,12 @@ var app = {
 };
 
 app.initialize();
+
+
+function keyUp(event){
+    console.log(event);
+    var key = event.key || event.keyCode;
+    if (key === 'Enter' || key === 13) {
+        document.activeElement.blur();
+    }
+}

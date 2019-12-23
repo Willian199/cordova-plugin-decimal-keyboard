@@ -28,7 +28,7 @@
         * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -59,12 +59,12 @@
 
         <label>
             done-button - default
-            <input type="text" inputmode="numeric" pattern="[0-9]*" done-button="Ok">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" done-button="Ok" onkeyup="keyUp(event)" >
         </label>
         <br><br>
         <label>
             done-button="Done"
-            <input type="number" pattern="[0-9]*" done-button="Done">
+            <input type="number" pattern="[0-9]*" done-button="Done" onkeyup="keyUp(event)">
         </label>
         <br><br>
     </form>
