@@ -66,7 +66,9 @@ DecimalKeyboard.addDecimal = function () {
 
 
 DecimalKeyboard.onDoneClick = function () {
-  document.activeElement.blur();
+  var keyEvent = new KeyboardEvent('keyup', { key: 'Enter', code: 'Enter', charCode: 0, keyCode: 13, which: 13 });
+  document.activeElement.dispatchEvent(keyEvent);
+  // document.activeElement.blur();
 };
 
 
