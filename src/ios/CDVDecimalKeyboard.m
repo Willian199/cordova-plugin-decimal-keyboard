@@ -104,7 +104,11 @@ NSString *customButtonType;
     customButton.layer.cornerRadius = 10;
     customButton.clipsToBounds = YES;
 
-    // locate keyboard view
+    [self locateKeyboardView];
+}
+
+- (void) locateKeyboardView{
+       // locate keyboard view
     UIWindow* tempWindow = nil;
     NSArray* openWindows = [[UIApplication sharedApplication] windows];
 
@@ -169,6 +173,7 @@ NSString *customButtonType;
             if([buttonType isEqualToString:@"done-button"]){
                 customButton.hidden=NO;
                 [self setDoneTitle];
+                [self locateKeyboardView];
             } else if([buttonType isEqualToString:@"decimal-char"]){
                 customButton.hidden=NO;
                 [self setDecimalChar];
