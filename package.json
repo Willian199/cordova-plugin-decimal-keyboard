@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-decimal-keyboard-wkwebview",
-  "version": "1.0.10",
+  "version": "1.0.9",
   "cordova": {
     "id": "cordova-plugin-decimal-keyboard-wkwebview",
     "platforms": [
