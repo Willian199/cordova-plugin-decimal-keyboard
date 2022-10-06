@@ -63,8 +63,8 @@ DecimalKeyboard.addDecimal = function () {
 
   activeElement.value = valueToSet;
 
-  if(activeElement.attributes["fire-decimal-event"] == undefined &&
-      activeElement.attributes["fire-decimal-event"] == 'undefined' &&
+  if(activeElement.attributes["fire-decimal-event"] != undefined &&
+      activeElement.attributes["fire-decimal-event"] != 'undefined' &&
       activeElement.attributes["fire-decimal-event"].value == 'true'){
           var keyEvent = new KeyboardEvent('keyup', { key: decimalChar, code: 256, charCode: 256, keyCode: 256, which: 256 });
           activeElement.dispatchEvent(keyEvent);
