@@ -62,13 +62,20 @@ DecimalKeyboard.addDecimal = function () {
   }
 
   activeElement.value = valueToSet;
+
+  if(activeElement.attributes["fire-decimal-event"] == undefined &&
+      activeElement.attributes["fire-decimal-event"] == 'undefined' &&
+      activeElement.attributes["fire-decimal-event"].value == 'true'){
+          var keyEvent = new KeyboardEvent('keyup', { key: decimalChar, code: 256, charCode: 256, keyCode: 256, which: 256 });
+          activeElement.dispatchEvent(keyEvent);
+  }
 };
 
 
 DecimalKeyboard.onDoneClick = function () {
   var keyEvent = new KeyboardEvent('keyup', { key: 'Enter', code: 'Enter', charCode: 0, keyCode: 13, which: 13 });
   document.activeElement.dispatchEvent(keyEvent);
-  // document.activeElement.blur();
+  document.activeElement.blur();
 };
 
 

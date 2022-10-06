@@ -89,7 +89,7 @@ NSString *customButtonType;
     if ([settings cordovaBoolSettingForKey:@"KeyboardAppearanceDark" defaultValue:NO]) {
         [customButton setTitleColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
     } else {
-        [customButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+        [customButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     }
 
     [customButton addTarget:self action:@selector(buttonPressed:)
