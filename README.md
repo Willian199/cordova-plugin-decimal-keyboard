@@ -8,7 +8,7 @@ Taken from [mrchandoo's](https://github.com/mrchandoo) repo [cordova-plugin-deci
 ## Install
 
 ```bash
-cordova plugin add --save https://github.com/MaximBelov/cordova-plugin-decimal-keyboard-wkwebview.git
+cordova plugin add https://github.com/Willian199/cordova-plugin-decimal-keyboard --save
 ```
 
 ## Usage
