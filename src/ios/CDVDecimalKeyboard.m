@@ -118,6 +118,7 @@ NSString *customButtonType;
         }
     }
 
+    //can remove
     if(tempWindow ==nil){
         //for ios 8
         for(UIWindow* object in openWindows){
@@ -132,7 +133,7 @@ NSString *customButtonType;
         keyboard = [tempWindow.subviews objectAtIndex:i];
         customButtonRect = CGRectMake(0.0, 0.0, 0.0, 0.0);
         [self calculateCustomButtonRect:keyboard];
-//        NSLog(@"Positioning customButton at %@", NSStringFromCGRect(customButtonRect));
+        //NSLog(@"Positioning customButton at %@", NSStringFromCGRect(customButtonRect));
         customButton.frame = customButtonRect;
         [keyPlane addSubview:customButton];
     }

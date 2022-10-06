@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-decimal-keyboard-wkwebview" version="1.0.10">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-decimal-keyboard-wkwebview" version="2.0.0">
     <name>Decimal Keyboard</name>
     <description>Cordova Decimal Keyboard Plugin with WKWebView support</description>
     <license>Apache 2.0</license>
     <keywords>cordova, keyboard, decimal keyboard, wkwebview</keywords>
 
     <engines>
-    <engine name="cordova" version=">=3.2.0" />
+        <engine name="cordova" version=">=10.0.0"/>
+        <engine name="cordova-ios" version=">=6.0.0"/>
     </engines>
 
     <js-module src="www/decimal-keyboard.js" name="decimalKeyboard">
